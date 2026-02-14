@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { QuizState, QuizConfig } from './types';
+import type { QuizState, QuizConfig, Question } from './types';
 import { defaultQuizConfig } from './quizData';
 import { dogBreedQuizConfig } from './dogQuizData';
 import { QuizSelector } from './components/QuizSelector';
@@ -7,6 +7,32 @@ import { StartScreen } from './components/StartScreen';
 import { QuizScreen as QuizScreenComponent } from './components/QuizScreen';
 import { ResultsScreen } from './components/ResultsScreen';
 import './App.css';
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Shuffle questions and their options
+function shuffleQuizConfig(config: QuizConfig): QuizConfig {
+  const shuffledQuestions = shuffleArray(config.questions).map((question): Question => {
+    const shuffledOptions = shuffleArray(question.options);
+    return {
+      ...question,
+      options: shuffledOptions,
+    };
+  });
+
+  return {
+    ...config,
+    questions: shuffledQuestions,
+  };
+}
 
 // Available quizzes configuration
 const availableQuizzes = [
@@ -43,20 +69,23 @@ function App() {
     const quiz = availableQuizzes.find(q => q.id === quizId);
     if (quiz) {
       setSelectedQuizId(quizId);
-      setConfig(quiz.config);
+      const shuffledConfig = shuffleQuizConfig(quiz.config);
+      setConfig(shuffledConfig);
       setQuizState({
         currentQuestionIndex: 0,
         score: 0,
         isQuizComplete: false,
         selectedAnswer: null,
         isAnswerChecked: false,
-        timeRemaining: quiz.config.timePerQuestion,
+        timeRemaining: shuffledConfig.timePerQuestion,
       });
       setCurrentScreen('start');
     }
   }, []);
 
   const handleStart = useCallback(() => {
+    const shuffledConfig = shuffleQuizConfig(config);
+    setConfig(shuffledConfig);
     setQuizState(prev => ({
       ...prev,
       currentQuestionIndex: 0,
@@ -64,10 +93,10 @@ function App() {
       isQuizComplete: false,
       selectedAnswer: null,
       isAnswerChecked: false,
-      timeRemaining: config.timePerQuestion,
+      timeRemaining: shuffledConfig.timePerQuestion,
     }));
     setCurrentScreen('quiz');
-  }, [config.timePerQuestion]);
+  }, [config]);
 
   const handleAnswerSelect = useCallback((answer: string) => {
     setQuizState((prev) => ({
@@ -114,6 +143,8 @@ function App() {
   }, [config.questions.length, config.timePerQuestion]);
 
   const handleRestart = useCallback(() => {
+    const shuffledConfig = shuffleQuizConfig(config);
+    setConfig(shuffledConfig);
     setQuizState(prev => ({
       ...prev,
       currentQuestionIndex: 0,
@@ -121,10 +152,10 @@ function App() {
       isQuizComplete: false,
       selectedAnswer: null,
       isAnswerChecked: false,
-      timeRemaining: config.timePerQuestion,
+      timeRemaining: shuffledConfig.timePerQuestion,
     }));
     setCurrentScreen('quiz');
-  }, [config.timePerQuestion]);
+  }, [config]);
 
   const handleHome = useCallback(() => {
     setCurrentScreen('selector');

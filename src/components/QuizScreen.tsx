@@ -98,11 +98,6 @@ export function QuizScreen({
             className={styles.image}
             loading="eager"
           />
-          <div className={styles.imageOverlay}>
-            {currentQuestion.category && (
-              <span className={styles.category}>{currentQuestion.category}</span>
-            )}
-          </div>
         </div>
 
         {/* Question Text */}
