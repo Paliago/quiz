@@ -10,7 +10,7 @@ export default $config({
     };
   },
   async run() {
-    new sst.aws.StaticSite("site", {
+    new sst.aws.StaticSite("Site", {
       build: {
         command: "npm run build",
         output: "dist",
