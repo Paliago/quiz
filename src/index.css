@@ -39,10 +39,11 @@ body {
   flex-direction: column;
 }
 
-/* Prevent text selection on interactive elements */
-button {
+/* Prevent text selection and double-tap zoom on interactive elements */
+button, .option, .imageContainer {
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 /* Image loading placeholder */
