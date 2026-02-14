@@ -1,0 +1,117 @@
+import type { Question, QuizConfig } from './types';
+
+export const natureQuizQuestions: Question[] = [
+  {
+    id: 1,
+    imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
+    options: ['Swiss Alps', 'Rocky Mountains', 'Himalayas', 'Andes'],
+    correctAnswer: 'Swiss Alps',
+    category: 'Mountains',
+    difficulty: 'medium',
+  },
+  {
+    id: 2,
+    imageUrl: 'https://images.unsplash.com/photo-1504714146340-959ca07e1f38?w=800&h=600&fit=crop',
+    options: ['Eiffel Tower', 'Tokyo Tower', 'Space Needle', 'CN Tower'],
+    correctAnswer: 'Eiffel Tower',
+    category: 'Landmarks',
+    difficulty: 'easy',
+  },
+  {
+    id: 3,
+    imageUrl: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800&h=600&fit=crop',
+    options: ['Sahara Desert', 'Gobi Desert', 'Mojave Desert', 'Atacama Desert'],
+    correctAnswer: 'Sahara Desert',
+    category: 'Deserts',
+    difficulty: 'medium',
+  },
+  {
+    id: 4,
+    imageUrl: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop',
+    options: ['Amazon Rainforest', 'Borneo', 'Congo', 'Daintree'],
+    correctAnswer: 'Amazon Rainforest',
+    category: 'Forests',
+    difficulty: 'medium',
+  },
+  {
+    id: 5,
+    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
+    options: ['Maldives', 'Bora Bora', 'Santorini', 'Fiji'],
+    correctAnswer: 'Maldives',
+    category: 'Beaches',
+    difficulty: 'hard',
+  },
+  {
+    id: 6,
+    imageUrl: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
+    options: ['Great Barrier Reef', 'Red Sea', 'Caribbean Sea', 'Mediterranean Sea'],
+    correctAnswer: 'Great Barrier Reef',
+    category: 'Oceans',
+    difficulty: 'easy',
+  },
+  {
+    id: 7,
+    imageUrl: 'https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800&h=600&fit=crop',
+    options: ['Niagara Falls', 'Victoria Falls', 'Iguazu Falls', 'Angel Falls'],
+    correctAnswer: 'Niagara Falls',
+    category: 'Waterfalls',
+    difficulty: 'easy',
+  },
+  {
+    id: 8,
+    imageUrl: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=600&fit=crop',
+    options: ['Northern Lights', 'Aurora Australis', 'Milky Way', 'Comet'],
+    correctAnswer: 'Northern Lights',
+    category: 'Natural Phenomena',
+    difficulty: 'easy',
+  },
+];
+
+export const defaultQuizConfig: QuizConfig = {
+  questions: natureQuizQuestions,
+  title: 'World Wonders Quiz',
+  description: 'Test your knowledge of famous natural and man-made wonders around the world!',
+  timePerQuestion: 30,
+  theme: {
+    name: 'Ocean Blue',
+    primaryColor: '#3b82f6',
+    secondaryColor: '#1e40af',
+    backgroundColor: '#0f172a',
+    textColor: '#f8fafc',
+    accentColor: '#06b6d4',
+    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  },
+};
+
+export const alternativeQuizConfig: QuizConfig = {
+  questions: [
+    {
+      id: 1,
+      imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&h=600&fit=crop',
+      options: ['Pasta', 'Pizza', 'Sushi', 'Tacos'],
+      correctAnswer: 'Pasta',
+      category: 'Food',
+      difficulty: 'easy',
+    },
+    {
+      id: 2,
+      imageUrl: 'https://images.unsplash.com/photo-1534067783941-51c9c236309f?w=800&h=600&fit=crop',
+      options: ['Statue of Liberty', 'Christ the Redeemer', 'Colossus of Rhodes', 'Moai'],
+      correctAnswer: 'Statue of Liberty',
+      category: 'Monuments',
+      difficulty: 'easy',
+    },
+  ],
+  title: 'Food & Culture Quiz',
+  description: 'Explore delicious foods and cultural landmarks!',
+  timePerQuestion: 20,
+  theme: {
+    name: 'Sunset Orange',
+    primaryColor: '#f97316',
+    secondaryColor: '#c2410c',
+    backgroundColor: '#1a1a1a',
+    textColor: '#fafafa',
+    accentColor: '#fbbf24',
+    fontFamily: 'Georgia, "Times New Roman", serif',
+  },
+};
