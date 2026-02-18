@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import type { QuizState, QuizConfig, Question } from './types';
 import { defaultQuizConfig } from './quizData';
+import { dogPhotoQuizConfig } from './dogPhotoQuizData';
 import { dogBreedQuizConfig } from './dogQuizData';
 import { swedishBirdQuizConfig } from './swedishBirdQuizData';
 import { QuizSelector } from './components/QuizSelector';
@@ -44,10 +45,17 @@ const availableQuizzes = [
     color: '#166534',
   },
   {
-    id: 'dog-breeds',
-    config: dogBreedQuizConfig,
+    id: 'dog-photo-quiz',
+    config: dogPhotoQuizConfig,
     icon: '🐕',
     color: '#d97706',
+    title: 'Guess the Dog Breed',
+  },
+  {
+    id: 'dog-breed-facts',
+    config: dogBreedQuizConfig,
+    icon: '🦴',
+    color: '#92400e',
   },
   {
     id: 'world-wonders',
