@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import type { QuizState, QuizConfig, Question } from './types';
 import { defaultQuizConfig } from './quizData';
 import { dogBreedQuizConfig } from './dogQuizData';
+import { swedishBirdQuizConfig } from './swedishBirdQuizData';
 import { QuizSelector } from './components/QuizSelector';
 import { StartScreen } from './components/StartScreen';
 import { QuizScreen as QuizScreenComponent } from './components/QuizScreen';
@@ -36,6 +37,12 @@ function shuffleQuizConfig(config: QuizConfig): QuizConfig {
 
 // Available quizzes configuration
 const availableQuizzes = [
+  {
+    id: 'swedish-birds',
+    config: swedishBirdQuizConfig,
+    icon: '🐦',
+    color: '#166534',
+  },
   {
     id: 'dog-breeds',
     config: dogBreedQuizConfig,
