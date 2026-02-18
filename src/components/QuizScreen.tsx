@@ -60,6 +60,21 @@ export function QuizScreen({
     return styles.disabled;
   };
 
+  const getQuestionTypeLabel = (type: Question['type']): string => {
+    switch (type) {
+      case 'image-identification':
+        return 'Image ID';
+      case 'true-false':
+        return 'True/False';
+      case 'fact-multiple-choice':
+        return 'Breed Facts';
+      case 'characteristic-match':
+        return 'Characteristics';
+      default:
+        return 'Question';
+    }
+  };
+
   return (
     <div className={styles.container}>
       {/* Progress Bar */}
@@ -88,20 +103,37 @@ export function QuizScreen({
         </div>
       </div>
 
+      {/* Question Type Badge */}
+      <div className={styles.typeBadge}>
+        {getQuestionTypeLabel(currentQuestion.type)}
+        {currentQuestion.difficulty && (
+          <span className={`${styles.difficulty} ${styles[currentQuestion.difficulty]}`}>
+            {currentQuestion.difficulty}
+          </span>
+        )}
+      </div>
+
       {/* Question Card */}
       <div className={styles.card}>
-        {/* Image Container */}
-        <div className={styles.imageContainer}>
-          <img 
-            src={currentQuestion.imageUrl} 
-            alt="Quiz question"
-            className={styles.image}
-            loading="eager"
-          />
-        </div>
+        {/* Image Container - only show if imageUrl exists */}
+        {currentQuestion.imageUrl && (
+          <div className={styles.imageContainer}>
+            <img 
+              src={currentQuestion.imageUrl} 
+              alt="Quiz question"
+              className={styles.image}
+              loading="eager"
+            />
+          </div>
+        )}
 
         {/* Question Text */}
-        <h2 className={styles.questionText}>What is shown in this image?</h2>
+        <h2 className={styles.questionText}>{currentQuestion.questionText}</h2>
+
+        {/* Category hint */}
+        {currentQuestion.category && (
+          <p className={styles.categoryHint}>Category: {currentQuestion.category}</p>
+        )}
 
         {/* Options */}
         <div className={styles.options}>
@@ -111,6 +143,7 @@ export function QuizScreen({
               className={`${styles.option} ${getButtonStyle(option)}`}
               onClick={() => !isAnswerChecked && onAnswerSelect(option)}
               disabled={isAnswerChecked}
+              data-testid={`option-${index}`}
             >
               <span className={styles.optionLetter}>
                 {String.fromCharCode(65 + index)}
@@ -125,12 +158,24 @@ export function QuizScreen({
           ))}
         </div>
 
+        {/* Fact display for answered questions */}
+        {isAnswerChecked && currentQuestion.fact && (
+          <div className={styles.factBox} data-testid="fact-box">
+            <h3 className={styles.factTitle}>Did You Know?</h3>
+            <p className={styles.factText}>{currentQuestion.fact}</p>
+            {currentQuestion.breedName && (
+              <p className={styles.breedName}>About: {currentQuestion.breedName}</p>
+            )}
+          </div>
+        )}
+
         {/* Next Button */}
         {isAnswerChecked && (
           <button 
             className={styles.nextButton}
             onClick={onNextQuestion}
             style={{ '--accent-color': theme.accentColor } as React.CSSProperties}
+            data-testid="next-button"
           >
             {currentQuestionIndex < questions.length - 1 ? 'Next Question' : 'See Results'}
             <svg className={styles.arrow} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

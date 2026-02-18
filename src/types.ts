@@ -1,10 +1,16 @@
+export type QuestionType = 'image-identification' | 'true-false' | 'fact-multiple-choice' | 'characteristic-match';
+
 export interface Question {
   id: number;
-  imageUrl: string;
+  type: QuestionType;
+  questionText: string;
+  imageUrl?: string;
   options: string[];
   correctAnswer: string;
   category?: string;
   difficulty?: 'easy' | 'medium' | 'hard';
+  fact?: string;
+  breedName?: string;
 }
 
 export interface QuizState {

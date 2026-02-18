@@ -3,6 +3,8 @@ import type { Question, QuizConfig } from './types';
 export const natureQuizQuestions: Question[] = [
   {
     id: 1,
+    type: 'image-identification',
+    questionText: 'What mountain range is shown in this image?',
     imageUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
     options: ['Swiss Alps', 'Rocky Mountains', 'Himalayas', 'Andes'],
     correctAnswer: 'Swiss Alps',
@@ -11,6 +13,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 2,
+    type: 'image-identification',
+    questionText: 'Identify this famous landmark:',
     imageUrl: 'https://images.unsplash.com/photo-1504714146340-959ca07e1f38?w=800&h=600&fit=crop',
     options: ['Eiffel Tower', 'Tokyo Tower', 'Space Needle', 'CN Tower'],
     correctAnswer: 'Eiffel Tower',
@@ -19,6 +23,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 3,
+    type: 'image-identification',
+    questionText: 'Which desert is shown in this image?',
     imageUrl: 'https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=800&h=600&fit=crop',
     options: ['Sahara Desert', 'Gobi Desert', 'Mojave Desert', 'Atacama Desert'],
     correctAnswer: 'Sahara Desert',
@@ -27,6 +33,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 4,
+    type: 'image-identification',
+    questionText: 'What rainforest is pictured here?',
     imageUrl: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop',
     options: ['Amazon Rainforest', 'Borneo', 'Congo', 'Daintree'],
     correctAnswer: 'Amazon Rainforest',
@@ -35,6 +43,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 5,
+    type: 'image-identification',
+    questionText: 'Which tropical destination is shown?',
     imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&h=600&fit=crop',
     options: ['Maldives', 'Bora Bora', 'Santorini', 'Fiji'],
     correctAnswer: 'Maldives',
@@ -43,6 +53,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 6,
+    type: 'image-identification',
+    questionText: 'Identify this ocean location:',
     imageUrl: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
     options: ['Great Barrier Reef', 'Red Sea', 'Caribbean Sea', 'Mediterranean Sea'],
     correctAnswer: 'Great Barrier Reef',
@@ -51,6 +63,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 7,
+    type: 'image-identification',
+    questionText: 'Which famous waterfall is this?',
     imageUrl: 'https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=800&h=600&fit=crop',
     options: ['Niagara Falls', 'Victoria Falls', 'Iguazu Falls', 'Angel Falls'],
     correctAnswer: 'Niagara Falls',
@@ -59,6 +73,8 @@ export const natureQuizQuestions: Question[] = [
   },
   {
     id: 8,
+    type: 'image-identification',
+    questionText: 'What natural phenomenon is captured here?',
     imageUrl: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=600&fit=crop',
     options: ['Northern Lights', 'Aurora Australis', 'Milky Way', 'Comet'],
     correctAnswer: 'Northern Lights',
@@ -87,6 +103,8 @@ export const alternativeQuizConfig: QuizConfig = {
   questions: [
     {
       id: 1,
+      type: 'image-identification',
+      questionText: 'What dish is shown in this image?',
       imageUrl: 'https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=800&h=600&fit=crop',
       options: ['Pasta', 'Pizza', 'Sushi', 'Tacos'],
       correctAnswer: 'Pasta',
@@ -95,6 +113,8 @@ export const alternativeQuizConfig: QuizConfig = {
     },
     {
       id: 2,
+      type: 'image-identification',
+      questionText: 'Identify this famous monument:',
       imageUrl: 'https://images.unsplash.com/photo-1534067783941-51c9c236309f?w=800&h=600&fit=crop',
       options: ['Statue of Liberty', 'Christ the Redeemer', 'Colossus of Rhodes', 'Moai'],
       correctAnswer: 'Statue of Liberty',
