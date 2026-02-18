@@ -1,8 +1,8 @@
 import type { Question, QuizConfig } from './types';
 
-// Swedish Garden Birds Quiz - 12 Most Common Species at Swedish Feeders
-// Based on Birdlife Sverige research on feeder bird populations
-// All images from Wikimedia Commons (CC-BY-SA or public domain)
+// Svenska Trädgårdsfåglar Quiz - 12 Vanligaste Arterna vid Svenska Fågelbord
+// Baserat på Birdlife Sveriges forskning om fågelbordspopulationer
+// Alla bilder från Wikimedia Commons (CC-BY-SA eller public domain)
 
 export interface SwedishBird {
   swedishName: string;
@@ -23,18 +23,18 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'Great Tit',
     scientificName: 'Parus major',
     fieldMarks: [
-      'Black head with white cheeks',
-      'Yellow belly with black central stripe',
-      'Greenish back',
-      'Black stripe down the chest',
+      'Svart huvud med vita kinder',
+      'Gul mage med svart mittstreck',
+      'Grönaktig rygg',
+      'Svart streck ner över bröstet',
     ],
-    status: 'Most common feeder bird in Sweden (#1 at feeders)',
-    habitat: ['Gardens', 'Woodlands', 'Parks', 'Urban areas'],
+    status: 'Vanligaste fågeln vid fågelbord i Sverige (#1 vid fågelbord)',
+    habitat: ['Trädgårdar', 'Skogar', 'Parker', 'Stadsområden'],
     funFacts: [
-      'Can be taught to ring a bell for food',
-      'One of the most widespread bird species in Europe',
-      'Their song sounds like "teacher-teacher-teacher"',
-      'Highly adaptable to urban environments',
+      'Kan lära sig att ringa i en bjällra för mat',
+      'En av de mest utbredda fågelarterna i Europa',
+      'Deras sång låter som "lärare-lärare-lärare"',
+      'Mycket anpassningsbar till stadsmiljöer',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Parus_major_-_01.jpg/640px-Parus_major_-_01.jpg',
     difficulty: 'easy',
@@ -44,18 +44,18 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'Eurasian Blue Tit',
     scientificName: 'Cyanistes caeruleus',
     fieldMarks: [
-      'Blue cap and wings',
-      'Yellow belly and chest',
-      'Small size with round body',
-      'Blue tail',
+      'Blå hjässa och vingar',
+      'Gul mage och bröst',
+      'Liten storlek med rund kropp',
+      'Blå stjärt',
     ],
-    status: '#2 most common at Swedish feeders',
-    habitat: ['Gardens', 'Woodlands', 'Parks', 'Hedgerows'],
+    status: '#2 vanligaste vid svenska fågelbord',
+    habitat: ['Trädgårdar', 'Skogar', 'Parker', 'Häckar'],
     funFacts: [
-      'Very acrobatic feeders, often hanging upside down',
-      'Will readily use nest boxes',
-      'Eat insects, seeds, and nuts',
-      'Population declining in some areas',
+      'Mycket akrobatiska vid matning, hänger ofta upp och ner',
+      'Använder gärna fågelholkar',
+      'Äter insekter, frön och nötter',
+      'Populationen minskar i vissa områden',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Eurasian_blue_tit_Lancashire.jpg/640px-Eurasian_blue_tit_Lancashire.jpg',
     difficulty: 'easy',
@@ -65,62 +65,62 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'House Sparrow',
     scientificName: 'Passer domesticus',
     fieldMarks: [
-      'Grey cap (male)',
-      'Chestnut back with black streaks',
-      'Grey belly',
-      'Black bib (male breeding)',
+      'Grå hjässa (hane)',
+      'Kastanjefärgad rygg med svarta streck',
+      'Grå mage',
+      'Svart haklapp (hane i häckningsdräkt)',
     ],
-    status: '#3 most common at feeders, declining population',
-    habitat: ['Gardens', 'Urban areas', 'Farmland', 'Villages'],
+    status: '#3 vanligaste vid fågelbord, minskande population',
+    habitat: ['Trädgårdar', 'Stadsområden', 'Jordbruksmark', 'Byar'],
     funFacts: [
-      'Once the most common bird in Sweden, now declining',
-      'Highly social birds that live in colonies',
-      'Males have a black bib that gets darker with better health',
-      'Adapted to live closely with humans',
+      'En gång den vanligaste fågeln i Sverige, nu minskande',
+      'Mycket sociala fåglar som lever i kolonier',
+      'Hanar har en svart haklapp som blir mörkare med bättre hälsa',
+      'Anpassade att leva nära människor',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/House_Sparrow_RWD2.jpg/640px-House_Sparrow_RWD2.jpg',
     difficulty: 'easy',
-    population: 'Unknown but declining',
+    population: 'Okänd men minskande',
   },
   koltrast: {
     swedishName: 'Koltrast',
     englishName: 'Eurasian Blackbird',
     scientificName: 'Turdus merula',
     fieldMarks: [
-      'Males: All black with bright orange beak',
-      'Females: Dark brown with duller beak',
-      'Yellow eye-ring',
-      'Medium-sized thrush',
+      'Hane: Heligt svart med lysorange näbb',
+      'Hona: Mörkbrun med mattare näbb',
+      'Gul ögonring',
+      'Medelstor trast',
     ],
-    status: 'Sweden national bird, common year-round',
-    habitat: ['Gardens', 'Woodlands', 'Parks', 'Urban areas'],
+    status: 'Sveriges nationalfågel, vanlig året runt',
+    habitat: ['Trädgårdar', 'Skogar', 'Parker', 'Stadsområden'],
     funFacts: [
-      'Voted as Sweden national bird in 1963',
-      'Beautiful flute-like song, especially at dawn and dusk',
-      'Can be very tame and approachable in gardens',
-      'Famous for their melodious singing',
+      'Röstades fram som Sveriges nationalfågel 1963',
+      'Vacker flöjtliknande sång, särskilt i gryning och skymning',
+      'Kan vara mycket tam och tillgänglig i trädgårdar',
+      'Känd för sin melodiska sång',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Common_Blackbird.jpg/640px-Common_Blackbird.jpg',
     difficulty: 'easy',
-    population: '3-6 million pairs',
+    population: '3-6 miljoner par',
   },
   domherre: {
     swedishName: 'Domherre',
     englishName: 'Eurasian Bullfinch',
     scientificName: 'Pyrrhula pyrrhula',
     fieldMarks: [
-      'Pink/red breast (male)',
-      'Grey back',
-      'Black cap',
-      'Thick black bill',
+      'Rosa/rött bröst (hane)',
+      'Grå rygg',
+      'Svart hjässa',
+      'Tjock svart näbb',
     ],
-    status: 'Population increasing, uncommon at feeders',
-    habitat: ['Coniferous forests', 'Gardens with berry bushes', 'Woodlands'],
+    status: 'Population ökar, ovanlig vid fågelbord',
+    habitat: ['Barrskogar', 'Trädgårdar med bärbuskar', 'Skogar'],
     funFacts: [
-      'Males have beautiful pinkish-red breast',
-      'Known for eating buds from fruit trees',
-      'Population has been increasing in recent years',
-      'Usually seen in pairs or small family groups',
+      'Hanar har vackert rosa-rött bröst',
+      'Känd för att äta knoppar från fruktträd',
+      'Populationen har ökat under de senaste åren',
+      'Ses vanligtvis i par eller små familjegrupper',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Pyrrhula_pyrrhula_-_01.jpg/640px-Pyrrhula_pyrrhula_-_01.jpg',
     difficulty: 'medium',
@@ -130,18 +130,18 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'Common Redpoll',
     scientificName: 'Acanthis flammea',
     fieldMarks: [
-      'Red forehead patch',
-      'Pink breast (male)',
-      'Brown-streaked body',
-      'Yellow bill',
+      'Rött pannband',
+      'Rosa bröst (hane)',
+      'Brunstreckad kropp',
+      'Gul näbb',
     ],
-    status: 'Invasion species, numbers vary dramatically',
-    habitat: ['Birch forests', 'Gardens with birch trees', 'Woodlands'],
+    status: 'Invasionsart, antalen varierar dramatiskt',
+    habitat: ['Björkskogar', 'Trädgårdar med björkar', 'Skogar'],
     funFacts: [
-      'Called "invasion birds" as their numbers fluctuate yearly',
-      'Come in large flocks some winters',
-      'Love birch seeds and nyjer seeds at feeders',
-      'Smaller than a sparrow with distinctive red cap',
+      'Kallas "invasionsfåglar" eftersom deras antal varierar årligen',
+      'Kommer i stora flockar vissa vintrar',
+      'Älskar björkfrön och nigerfrön vid fågelbord',
+      'Mindre än en sparv med distinkt röd hjässa',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Common_Redpoll.jpg/640px-Common_Redpoll.jpg',
     difficulty: 'medium',
@@ -151,62 +151,62 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'European Robin',
     scientificName: 'Erithacus rubecula',
     fieldMarks: [
-      'Orange-red breast and face',
-      'Brown back and wings',
-      'White belly',
-      'Distinctive round shape',
+      'Orange-rött bröst och ansikte',
+      'Brun rygg och vingar',
+      'Vit mage',
+      'Distinkt rund form',
     ],
-    status: '7.6 million pairs in Sweden, widespread',
-    habitat: ['Gardens', 'Woodlands', 'Parks', 'Hedgerows'],
+    status: '7,6 miljoner par i Sverige, utbredd',
+    habitat: ['Trädgårdar', 'Skogar', 'Parker', 'Häckar'],
     funFacts: [
-      '7.6 million pairs - one of the most numerous birds',
-      'Very territorial, even fighting their own reflection',
-      'Often follows gardeners looking for worms',
-      'Sings nearly year-round, even at night under streetlights',
+      '7,6 miljoner par - en av de mest talrika fåglarna',
+      'Mycket revirhävdande, slåss till och med mot sin egen spegelbild',
+      'Följer ofta trädgårdsarbetare på jakt efter maskar',
+      'Sjunger nästan året runt, till och med på natten under gatlyktor',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Erithacus_rubecula_%28cropped%29.jpg/640px-Erithacus_rubecula_%28cropped%29.jpg',
     difficulty: 'easy',
-    population: '7.6 million pairs',
+    population: '7,6 miljoner par',
   },
   bofink: {
     swedishName: 'Bofink',
     englishName: 'Common Chaffinch',
     scientificName: 'Fringilla coelebs',
     fieldMarks: [
-      'Pink breast (male)',
-      'Blue-grey cap (male)',
-      'White wing bars',
-      'Forked tail',
+      'Rosa bröst (hane)',
+      'Blågrå hjässa (hane)',
+      'Vita vingband',
+      'Gafflad stjärt',
     ],
-    status: '16.8 million pairs - #2 most common Swedish bird',
-    habitat: ['Woodlands', 'Gardens', 'Parks', 'Farmland'],
+    status: '16,8 miljoner par - #2 vanligaste fågeln i Sverige',
+    habitat: ['Skogar', 'Trädgårdar', 'Parker', 'Jordbruksmark'],
     funFacts: [
-      '16.8 million pairs - second most common breeding bird in Sweden',
-      'Males have beautiful pinkish breast and blue-grey head',
-      'Females are dull brown for camouflage',
-      "Famous for their descending song ending with 'pink pink'",
+      '16,8 miljoner par - näst vanligaste häckfågeln i Sverige',
+      'Hanar har vackert rosa bröst och blågrått huvud',
+      'Honor är matta bruna för kamouflage',
+      'Känd för sin fallande sång som slutar med "pink pink"',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fringilla_coelebs_-_01.jpg/640px-Fringilla_coelebs_-_01.jpg',
     difficulty: 'easy',
-    population: '16.8 million pairs',
+    population: '16,8 miljoner par',
   },
   skata: {
     swedishName: 'Skata',
     englishName: 'Eurasian Magpie',
     scientificName: 'Pica pica',
     fieldMarks: [
-      'Black and white plumage',
-      'Iridescent blue-green wings',
-      'Long tail',
-      'Large size for a passerine',
+      'Svart och vit fjäderdräkt',
+      'Iriserande blågröna vingar',
+      'Lång stjärt',
+      'Stor storlek för en tätting',
     ],
-    status: 'Common and widespread, intelligent',
-    habitat: ['Gardens', 'Woodlands', 'Parks', 'Urban areas', 'Farmland'],
+    status: 'Vanlig och utbredd, intelligent',
+    habitat: ['Trädgårdar', 'Skogar', 'Parker', 'Stadsområden', 'Jordbruksmark'],
     funFacts: [
-      'One of the most intelligent birds, can recognize themselves in mirrors',
-      'Highly social with complex social structures',
-      'Can live up to 20 years',
-      'Omnivorous and opportunistic feeders',
+      'En av de mest intelligenta fåglarna, kan känna igen sig själv i speglar',
+      'Mycket social med komplexa sociala strukturer',
+      'Kan leva upp till 20 år',
+      'Allätare och opportunistiska matare',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Pica_pica_-_Compans_Caffarelli_-_2012-05-16.jpg/640px-Pica_pica_-_Compans_Caffarelli_-_2012-05-16.jpg',
     difficulty: 'easy',
@@ -216,18 +216,18 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'Western Jackdaw',
     scientificName: 'Coloeus monedula',
     fieldMarks: [
-      'Small crow size',
-      'Grey nape',
-      'Pale eyes',
-      'Black body',
+      'Liten kråkstorlek',
+      'Grå nacke',
+      'Ljusa ögon',
+      'Svart kropp',
     ],
-    status: 'Common, often seen in flocks',
-    habitat: ['Gardens', 'Urban areas', 'Villages', 'Farmland'],
+    status: 'Vanlig, ses ofta i flockar',
+    habitat: ['Trädgårdar', 'Stadsområden', 'Byar', 'Jordbruksmark'],
     funFacts: [
-      'Smallest member of the crow family in Sweden',
-      'Known for their pale grey nape and bright eyes',
-      'Highly intelligent and social',
-      'Often seen following rooks and crows',
+      'Minsta medlemmen av kråkfamiljen i Sverige',
+      'Känd för sin ljusgrå nacke och lysande ögon',
+      'Mycket intelligent och social',
+      'Ses ofta följa efter rokor och kråkor',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Coloeus_monedula_-Wroclaw%2C_Poland_-head-8a.jpg/640px-Coloeus_monedula_-Wroclaw%2C_Poland_-head-8a.jpg',
     difficulty: 'medium',
@@ -237,18 +237,18 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'Yellowhammer',
     scientificName: 'Emberiza citrinella',
     fieldMarks: [
-      'Bright yellow head (male)',
-      'Chestnut back',
-      'Yellow underparts',
-      'Rusty breast markings',
+      'Ljusgult huvud (hane)',
+      'Kastanjefärgad rygg',
+      'Gul undersida',
+      'Rostiga bröstteckningar',
     ],
-    status: 'Common farmland bird, declining',
-    habitat: ['Farmland', 'Gardens', 'Hedgerows', 'Open woodlands'],
+    status: 'Vanlig jordbruksfågel, minskande',
+    habitat: ['Jordbruksmark', 'Trädgårdar', 'Häckar', 'Öppna skogar'],
     funFacts: [
-      'Famous for their "a-little-bit-of-bread-and-no-cheese" song',
-      'Males have bright yellow heads in breeding season',
-      'Population has declined with modern farming practices',
-      'Ground feeders that prefer seeds',
+      'Känd för sin "lite-bröd-och-ingen-ost"-sång',
+      'Hanar har ljusgult huvud i häckningsdräkt',
+      'Populationen har minskat med moderna jordbruksmetoder',
+      'Markmatande fåglar som föredrar frön',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Emberiza_citrinella_-_01.jpg/640px-Emberiza_citrinella_-_01.jpg',
     difficulty: 'medium',
@@ -258,25 +258,25 @@ export const swedishGardenBirds: Record<string, SwedishBird> = {
     englishName: 'European Goldfinch',
     scientificName: 'Carduelis carduelis',
     fieldMarks: [
-      'Red face patch',
-      'Black and white head',
-      'Yellow wing patch',
-      'Brown body',
+      'Rött ansikte',
+      'Svart och vitt huvud',
+      'Gult vingband',
+      'Brun kropp',
     ],
-    status: 'Beautiful and common, loves thistle seeds',
-    habitat: ['Gardens', 'Parks', 'Farmland', 'Open woodlands'],
+    status: 'Vacker och vanlig, älskar tistelfrön',
+    habitat: ['Trädgårdar', 'Parker', 'Jordbruksmark', 'Öppna skogar'],
     funFacts: [
-      'One of the most colorful birds at Swedish feeders',
-      'Specialized in eating thistle and teasel seeds',
-      'Known for their musical twittering song',
-      'Their Swedish name "Steglits" comes from their thistle diet',
+      'En av de mest färggranna fåglarna vid svenska fågelbord',
+      'Specialiserad på att äta tistel- och kardborrefrön',
+      'Känd för sin musikaliska kvittrande sång',
+      'Deras svenska namn "Steglits" kommer från deras tisteldiet',
     ],
     imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Carduelis_carduelis_-_01.jpg/640px-Carduelis_carduelis_-_01.jpg',
     difficulty: 'easy',
   },
 };
 
-// Helper function to get a random bird excluding a specific one
+// Hjälpfunktion för att få slumpmässiga fåglar exklusive en specifik
 function getRandomBirds(excludeBird: SwedishBird, count: number): SwedishBird[] {
   const allBirds = Object.values(swedishGardenBirds);
   const filtered = allBirds.filter(bird => bird.englishName !== excludeBird.englishName);
@@ -284,7 +284,7 @@ function getRandomBirds(excludeBird: SwedishBird, count: number): SwedishBird[] 
   return shuffled.slice(0, count);
 }
 
-// Generate Photo Identification Questions (Type 1)
+// Generera fotoidentifieringsfrågor (Typ 1)
 function generatePhotoQuestions(): Question[] {
   const birds = Object.values(swedishGardenBirds);
   return birds.slice(0, 3).map((bird, index) => {
@@ -292,19 +292,19 @@ function generatePhotoQuestions(): Question[] {
     return {
       id: index + 1,
       type: 'image-identification',
-      questionText: `Identify this bird (${bird.swedishName}):`,
+      questionText: `Identifiera denna fågel (${bird.swedishName}):`,
       imageUrl: bird.imageUrl,
-      options: [bird.englishName, ...distractors.map(b => b.englishName)],
-      correctAnswer: bird.englishName,
-      category: 'Photo Identification',
+      options: [bird.swedishName, ...distractors.map(b => b.swedishName)],
+      correctAnswer: bird.swedishName,
+      category: 'Fotoidentifiering',
       difficulty: bird.difficulty,
       fact: `${bird.swedishName} - ${bird.status}. ${bird.funFacts[0]}`,
-      breedName: bird.englishName,
+      breedName: bird.swedishName,
     };
   });
 }
 
-// Generate Swedish Name Matching Questions (Type 2)
+// Generera svenska namnmatchningsfrågor (Typ 2)
 function generateSwedishNameQuestions(): Question[] {
   const birds = Object.values(swedishGardenBirds);
   return birds.slice(3, 6).map((bird, index) => {
@@ -312,18 +312,18 @@ function generateSwedishNameQuestions(): Question[] {
     return {
       id: index + 4,
       type: 'fact-multiple-choice',
-      questionText: `What is the English name for "${bird.swedishName}"?`,
-      options: [bird.englishName, ...distractors.map(b => b.englishName)],
-      correctAnswer: bird.englishName,
-      category: 'Swedish Names',
+      questionText: `Vilket svenskt namn motsvarar "${bird.englishName}"?`,
+      options: [bird.swedishName, ...distractors.map(b => b.swedishName)],
+      correctAnswer: bird.swedishName,
+      category: 'Svenska Namn',
       difficulty: bird.difficulty,
-      fact: `${bird.swedishName} means "${bird.englishName}" in English. ${bird.status}`,
-      breedName: bird.englishName,
+      fact: `"${bird.swedishName}" är det svenska namnet för "${bird.englishName}" på engelska. ${bird.status}`,
+      breedName: bird.swedishName,
     };
   });
 }
 
-// Generate Scientific Name Questions (Type 3)
+// Generera vetenskapliga namnfrågor (Typ 3)
 function generateScientificNameQuestions(): Question[] {
   const birds = Object.values(swedishGardenBirds);
   return birds.slice(6, 9).map((bird, index) => {
@@ -331,23 +331,23 @@ function generateScientificNameQuestions(): Question[] {
     return {
       id: index + 7,
       type: 'fact-multiple-choice',
-      questionText: `What is the scientific name for the ${bird.englishName}?`,
+      questionText: `Vad är det vetenskapliga namnet för ${bird.swedishName}?`,
       options: [bird.scientificName, ...distractors.map(b => b.scientificName)],
       correctAnswer: bird.scientificName,
-      category: 'Scientific Names',
+      category: 'Vetenskapliga Namn',
       difficulty: 'hard',
-      fact: `${bird.englishName} (${bird.swedishName}) is known scientifically as ${bird.scientificName}.`,
-      breedName: bird.englishName,
+      fact: `${bird.swedishName} är vetenskapligt känd som ${bird.scientificName}.`,
+      breedName: bird.swedishName,
     };
   });
 }
 
-// Generate Field Mark Identification Questions (Type 4)
+// Generera fältkänneteckenfrågor (Typ 4)
 function generateFieldMarkQuestions(): Question[] {
   const fieldMarkData = [
-    { bird: swedishGardenBirds.talgoxe, mark: 'black head with white cheeks and yellow belly' },
-    { bird: swedishGardenBirds.blames, mark: 'blue cap and yellow belly' },
-    { bird: swedishGardenBirds.domherre, mark: 'pink/red breast and black cap' },
+    { bird: swedishGardenBirds.talgoxe, mark: 'svart huvud med vita kinder och gul mage' },
+    { bird: swedishGardenBirds.blames, mark: 'blå hjässa och gul mage' },
+    { bird: swedishGardenBirds.domherre, mark: 'rosa/rött bröst och svart hjässa' },
   ];
 
   return fieldMarkData.map((data, index) => {
@@ -355,23 +355,23 @@ function generateFieldMarkQuestions(): Question[] {
     return {
       id: index + 10,
       type: 'characteristic-match',
-      questionText: `Which bird has ${data.mark}?`,
-      options: [data.bird.englishName, ...distractors.map(b => b.englishName)],
-      correctAnswer: data.bird.englishName,
-      category: 'Field Marks',
+      questionText: `Vilken fågel har ${data.mark}?`,
+      options: [data.bird.swedishName, ...distractors.map(b => b.swedishName)],
+      correctAnswer: data.bird.swedishName,
+      category: 'Fältkännetecken',
       difficulty: data.bird.difficulty,
-      fact: `${data.bird.englishName} (${data.bird.swedishName}): ${data.bird.fieldMarks.join(', ')}`,
-      breedName: data.bird.englishName,
+      fact: `${data.bird.swedishName}: ${data.bird.fieldMarks.join(', ')}`,
+      breedName: data.bird.swedishName,
     };
   });
 }
 
-// Generate Habitat Matching Questions (Type 5)
+// Generera habitatmatchningsfrågor (Typ 5)
 function generateHabitatQuestions(): Question[] {
   const habitatData = [
-    { bird: swedishGardenBirds.koltrast, habitat: 'Sweden national bird, commonly found in gardens and parks' },
-    { bird: swedishGardenBirds.rodhake, habitat: 'gardens and woodlands with 7.6 million pairs in Sweden' },
-    { bird: swedishGardenBirds.bofink, habitat: 'woodlands and gardens, the #2 most common bird with 16.8 million pairs' },
+    { bird: swedishGardenBirds.koltrast, habitat: 'Sveriges nationalfågel, vanligtvis i trädgårdar och parker' },
+    { bird: swedishGardenBirds.rodhake, habitat: 'trädgårdar och skogar med 7,6 miljoner par i Sverige' },
+    { bird: swedishGardenBirds.bofink, habitat: 'skogar och trädgårdar, den #2 vanligaste fågeln med 16,8 miljoner par' },
   ];
 
   return habitatData.map((data, index) => {
@@ -379,57 +379,57 @@ function generateHabitatQuestions(): Question[] {
     return {
       id: index + 13,
       type: 'fact-multiple-choice',
-      questionText: `Which bird is commonly found in ${data.habitat}?`,
-      options: [data.bird.englishName, ...distractors.map(b => b.englishName)],
-      correctAnswer: data.bird.englishName,
-      category: 'Habitat & Distribution',
+      questionText: `Vilken fågel finns vanligtvis i ${data.habitat}?`,
+      options: [data.bird.swedishName, ...distractors.map(b => b.swedishName)],
+      correctAnswer: data.bird.swedishName,
+      category: 'Habitat & Utbredning',
       difficulty: 'medium',
-      fact: `${data.bird.englishName} (${data.bird.swedishName}): ${data.bird.habitat.join(', ')}. ${data.bird.status}`,
-      breedName: data.bird.englishName,
+      fact: `${data.bird.swedishName}: ${data.bird.habitat.join(', ')}. ${data.bird.status}`,
+      breedName: data.bird.swedishName,
     };
   });
 }
 
-// Generate True/False Questions (Type 6)
+// Generera sant/falskt-frågor (Typ 6)
 function generateTrueFalseQuestions(): Question[] {
   return [
     {
       id: 16,
       type: 'true-false',
-      questionText: 'True or False: The Koltrast (Eurasian Blackbird) is Sweden\'s national bird.',
-      options: ['True', 'False'],
-      correctAnswer: 'True',
-      category: 'Bird Facts',
+      questionText: 'Sant eller falskt: Koltrasten är Sveriges nationalfågel.',
+      options: ['Sant', 'Falskt'],
+      correctAnswer: 'Sant',
+      category: 'Fågelfakta',
       difficulty: 'easy',
-      fact: 'The Koltrast was voted as Sweden\'s national bird in 1963. It is famous for its melodious flute-like song.',
-      breedName: swedishGardenBirds.koltrast.englishName,
+      fact: 'Koltrasten röstades fram som Sveriges nationalfågel 1963. Den är känd för sin melodiska flöjtliknande sång.',
+      breedName: swedishGardenBirds.koltrast.swedishName,
     },
     {
       id: 17,
       type: 'true-false',
-      questionText: 'True or False: The Bofink (Chaffinch) is the #2 most common bird in Sweden with 16.8 million pairs.',
-      options: ['True', 'False'],
-      correctAnswer: 'True',
-      category: 'Population Facts',
+      questionText: 'Sant eller falskt: Bofinken är den #2 vanligaste fågeln i Sverige med 16,8 miljoner par.',
+      options: ['Sant', 'Falskt'],
+      correctAnswer: 'Sant',
+      category: 'Populationsfakta',
       difficulty: 'medium',
-      fact: 'The Bofink (Common Chaffinch) has 16.8 million breeding pairs in Sweden, making it the second most common bird after the Willow Warbler.',
-      breedName: swedishGardenBirds.bofink.englishName,
+      fact: 'Bofinken har 16,8 miljoner häckande par i Sverige, vilket gör den till den näst vanligaste fågeln efter lövsångaren.',
+      breedName: swedishGardenBirds.bofink.swedishName,
     },
     {
       id: 18,
       type: 'true-false',
-      questionText: 'True or False: The Talgoxe (Great Tit) is the #2 most common bird at Swedish feeders.',
-      options: ['True', 'False'],
-      correctAnswer: 'False',
-      category: 'Feeder Facts',
+      questionText: 'Sant eller falskt: Talgoxen är den #2 vanligaste fågeln vid svenska fågelbord.',
+      options: ['Sant', 'Falskt'],
+      correctAnswer: 'Falskt',
+      category: 'Fågelbordsfakta',
       difficulty: 'medium',
-      fact: 'The Talgoxe (Great Tit) is actually the #1 most common bird at Swedish feeders, not #2. The Blåmes (Blue Tit) is #2.',
-      breedName: swedishGardenBirds.talgoxe.englishName,
+      fact: 'Talgoxen är faktiskt den #1 vanligaste fågeln vid svenska fågelbord, inte #2. Blåmesen är #2.',
+      breedName: swedishGardenBirds.talgoxe.swedishName,
     },
   ];
 }
 
-// Generate Additional Photo ID Questions (Type 7)
+// Generera ytterligare fotoidentifieringsfrågor (Typ 7)
 function generateAdditionalPhotoQuestions(): Question[] {
   const photoBirds = [
     swedishGardenBirds.steglits,
@@ -442,19 +442,19 @@ function generateAdditionalPhotoQuestions(): Question[] {
     return {
       id: index + 19,
       type: 'image-identification',
-      questionText: `Identify this bird:`,
+      questionText: `Identifiera denna fågel:`,
       imageUrl: bird.imageUrl,
-      options: [bird.englishName, ...distractors.map(b => b.englishName)],
-      correctAnswer: bird.englishName,
-      category: 'Photo Identification',
+      options: [bird.swedishName, ...distractors.map(b => b.swedishName)],
+      correctAnswer: bird.swedishName,
+      category: 'Fotoidentifiering',
       difficulty: bird.difficulty,
-      fact: `${bird.swedishName} (${bird.englishName}): ${bird.funFacts[0]}`,
-      breedName: bird.englishName,
+      fact: `${bird.swedishName}: ${bird.funFacts[0]}`,
+      breedName: bird.swedishName,
     };
   });
 }
 
-// Combine all questions
+// Kombinera alla frågor
 export const swedishBirdQuestions: Question[] = [
   ...generatePhotoQuestions(),
   ...generateSwedishNameQuestions(),
@@ -465,24 +465,24 @@ export const swedishBirdQuestions: Question[] = [
   ...generateAdditionalPhotoQuestions(),
 ];
 
-// Quiz configuration
+// Quiz-konfiguration
 export const swedishBirdQuizConfig: QuizConfig = {
   questions: swedishBirdQuestions,
-  title: 'Swedish Garden Birds Quiz',
-  description: 'Test your knowledge of the 12 most common Swedish garden birds! Learn to identify them by sight, name, and field marks.',
+  title: 'Svenska Trädgårdsfåglar Quiz',
+  description: 'Testa dina kunskaper om de 12 vanligaste svenska trädgårdsfåglarna! Lär dig identifiera dem utseendemässigt, efter namn och fältkännetecken.',
   timePerQuestion: 35,
   theme: {
-    name: 'Nordic Forest',
+    name: 'Nordisk Skog',
     primaryColor: '#166534', // green-700
     secondaryColor: '#14532d', // green-800
-    backgroundColor: '#f0fdf4', // green-50
-    textColor: '#14532d', // green-800
+    backgroundColor: '#052e16', // green-950 - dark background
+    textColor: '#dcfce7', // green-100 - light text
     accentColor: '#22c55e', // green-500
     fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
   },
 };
 
-// Helper functions for tests
+// Hjälpfunktioner för tester
 export function getAllBirds(): SwedishBird[] {
   return Object.values(swedishGardenBirds);
 }
@@ -502,17 +502,17 @@ export function getBirdByScientificName(name: string): SwedishBird | undefined {
 export function validateBirdData(bird: SwedishBird): string[] {
   const errors: string[] = [];
   
-  if (!bird.swedishName) errors.push('Missing swedishName');
-  if (!bird.englishName) errors.push('Missing englishName');
-  if (!bird.scientificName) errors.push('Missing scientificName');
-  if (!bird.fieldMarks || bird.fieldMarks.length === 0) errors.push('Missing fieldMarks');
-  if (!bird.status) errors.push('Missing status');
-  if (!bird.habitat || bird.habitat.length === 0) errors.push('Missing habitat');
-  if (!bird.funFacts || bird.funFacts.length === 0) errors.push('Missing funFacts');
-  if (!bird.imageUrl) errors.push('Missing imageUrl');
-  if (!bird.difficulty) errors.push('Missing difficulty');
+  if (!bird.swedishName) errors.push('Saknar swedishName');
+  if (!bird.englishName) errors.push('Saknar englishName');
+  if (!bird.scientificName) errors.push('Saknar scientificName');
+  if (!bird.fieldMarks || bird.fieldMarks.length === 0) errors.push('Saknar fieldMarks');
+  if (!bird.status) errors.push('Saknar status');
+  if (!bird.habitat || bird.habitat.length === 0) errors.push('Saknar habitat');
+  if (!bird.funFacts || bird.funFacts.length === 0) errors.push('Saknar funFacts');
+  if (!bird.imageUrl) errors.push('Saknar imageUrl');
+  if (!bird.difficulty) errors.push('Saknar difficulty');
   if (bird.imageUrl && !bird.imageUrl.includes('wikimedia.org')) {
-    errors.push('Image URL must be from Wikimedia Commons');
+    errors.push('Bild-URL måste vara från Wikimedia Commons');
   }
   
   return errors;
@@ -525,7 +525,7 @@ export function validateAllBirds(): { valid: boolean; errors: Record<string, str
   allBirds.forEach(bird => {
     const birdErrors = validateBirdData(bird);
     if (birdErrors.length > 0) {
-      errors[bird.englishName || 'Unknown'] = birdErrors;
+      errors[bird.swedishName || 'Okänd'] = birdErrors;
     }
   });
   
@@ -544,24 +544,24 @@ export function validateQuizQuestions(): { valid: boolean; errors: string[] } {
   const questions = swedishBirdQuestions;
   
   if (questions.length === 0) {
-    errors.push('No questions defined');
+    errors.push('Inga frågor definierade');
   }
   
   questions.forEach((q) => {
     if (!q.options.includes(q.correctAnswer)) {
-      errors.push(`Question ${q.id}: Correct answer not in options`);
+      errors.push(`Fråga ${q.id}: Rätt svar finns inte bland alternativen`);
     }
     if (q.options.length !== 4 && q.options.length !== 2) {
-      errors.push(`Question ${q.id}: Should have 4 options (or 2 for true/false)`);
+      errors.push(`Fråga ${q.id}: Bör ha 4 alternativ (eller 2 för sant/falskt)`);
     }
     if (q.type === 'image-identification' && !q.imageUrl) {
-      errors.push(`Question ${q.id}: Image identification missing imageUrl`);
+      errors.push(`Fråga ${q.id}: Bildidentifiering saknar imageUrl`);
     }
   });
   
-  // Check that we have enough questions
+  // Kontrollera att vi har tillräckligt många frågor
   if (questions.length < 12) {
-    errors.push(`Only ${questions.length} questions, need at least 12`);
+    errors.push(`Endast ${questions.length} frågor, behöver minst 12`);
   }
   
   return {
